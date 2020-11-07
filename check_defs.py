@@ -1,4 +1,5 @@
-#!usr/bin/env python3
+#!/usr/bin/python3
+# The above works for Windows Subsystem for Linux
 
 ### Imports
 import psutil

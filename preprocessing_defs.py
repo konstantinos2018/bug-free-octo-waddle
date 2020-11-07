@@ -5,8 +5,8 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import check_defs
 
-def list_to_dataframe(cpu_usage, timestamp):
-	df = pd.DataFrame({'cpu_usage_percent': cpu_usage, 'timestamp': timestamp})
+def list_to_series(cpu_usage, timestamp):
+	df = pd.Series({'cpu_usage_percent': cpu_usage, 'timestamp': timestamp})
 	
 	return df
 	

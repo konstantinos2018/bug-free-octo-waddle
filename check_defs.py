@@ -3,8 +3,6 @@
 
 ### Imports
 import psutil
-import pandas as pd
-from matplotlib import pyplot as plt
 import datetime as dt
 
 def cpu_sampling(n_secs=0.1, sampling_duration=5):

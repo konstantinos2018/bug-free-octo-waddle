@@ -32,5 +32,5 @@ def cpu_sampling(n_secs=0.1, sampling_duration=5):
 
 if __name__ == '__main__':
 
-	cpu_lst, cpu_time = cpu_sampling(n_secs=0.1)
+	cpu_lst, cpu_time = cpu_sampling(n_secs=0.1, sampling_duration=5)
 	print(len(cpu_lst))

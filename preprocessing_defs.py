@@ -11,6 +11,13 @@ def list_to_series(cpu_usage, timestamp):
 	return df
 	
 if __name__ == '__main__':
-	cpu_usage, timestamp = check_defs.cpu_sampling(n_secs=0.1, sampling_duration=5)
-	df = list_to_dataframe(cpu_usage, timestamp)
+	n_secs = 0.2 # time interval
+	cpu_usage, timestamp = check_defs.cpu_sampling(n_secs=n_secs, sampling_duration=20)
+	df = list_to_series(cpu_usage, timestamp)
 	print(df)
+	fig = plt.figure(figsize=(20,5))
+	plt.plot(df.timestamp, df.cpu_usage_percent)
+	plt.title('CPU Usage timeseries (timestep={0} s)'.format(n_secs), fontsize=23)
+	plt.xlabel('Timestamp', fontsize=18)
+	plt.ylabel('Usage [%]', fontsize=18)
+	fig.savefig('./plot.png', dpi=300)
